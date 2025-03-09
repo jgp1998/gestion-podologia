@@ -88,7 +88,7 @@ export default function Sidebar() {
       >
         <div className="flex items-center justify-between h-16 px-4 border-b">
           <div className={cn("flex items-center", collapsed && "justify-center w-full")}>
-            <span className={cn("font-bold text-xl text-primary", collapsed && "hidden")}>PodoCare</span>
+            <span className={cn("font-bold text-xl text-primary", collapsed && "hidden")}>Gestión Podologia</span>
             <span className={cn("hidden font-bold text-xl text-primary", collapsed && "block")}>PC</span>
           </div>
           <Button variant="ghost" size="icon" onClick={toggleSidebar} className="hidden md:flex">

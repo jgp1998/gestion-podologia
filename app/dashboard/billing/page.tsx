@@ -14,7 +14,7 @@ export default function BillingPage() {
       <header className="sticky top-0 z-10 border-b bg-background">
         <div className="container flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-xl text-primary">PodoCare</span>
+            <span className="font-bold text-xl text-primary">Gestión Podologia</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors">
