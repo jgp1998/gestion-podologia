@@ -10,6 +10,11 @@ export default function RegisterPage() {
     <div className="min-h-screen flex items-center justify-center bg-muted/40 px-4 py-8">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
+        <div className="text-right text-sm">
+            <Link href="/" className="text-primary hover:underline">
+              Volver
+            </Link>
+          </div>
           <CardTitle className="text-2xl font-bold">Crear una cuenta</CardTitle>
           <CardDescription>Ingresa tus datos para registrarte en Gestión Podología</CardDescription>
         </CardHeader>
