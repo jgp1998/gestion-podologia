@@ -47,7 +47,7 @@ export default function Header() {
                         <Link href="/register">Registrarse</Link>
                     </Button>
                 </div>
-
+            
                 {/* Menú móvil */}
                 <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
                     <SheetTrigger asChild className="md:hidden">
@@ -84,6 +84,13 @@ export default function Header() {
                                     onClick={closeMenu}
                                 >
                                     Testimonios
+                                </Link>
+                                <Link
+                                    href="/dashboard"
+                                    className="text-lg font-medium hover:text-primary transition-colors"
+                                    onClick={closeMenu}
+                                >
+                                    Demo
                                 </Link>
                             </nav>
 

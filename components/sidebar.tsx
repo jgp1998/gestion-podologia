@@ -12,10 +12,11 @@ import {
   MessageSquare,
   CreditCard,
   Settings,
-  ChevronLeft,
+ChevronRight,
   Menu,
   LogOut,
 } from "lucide-react"
+import ThemeToggle from "./theme-toggle"
 
 export default function Sidebar() {
   const pathname = usePathname()
@@ -61,12 +62,13 @@ export default function Sidebar() {
       href: "/dashboard/settings",
       icon: <Settings className="h-5 w-5" />,
     },
+
   ]
 
   return (
     <>
       {/* Mobile menu button */}
-      <Button variant="ghost" size="icon" className="md:hidden fixed top-4 left-4 z-50" onClick={toggleMobileSidebar}>
+      <Button variant="ghost" size="icon" className="md:hidden fixed top-4 right-4 z-50" onClick={toggleMobileSidebar}>
         <Menu className="h-5 w-5" />
       </Button>
 
@@ -92,7 +94,7 @@ export default function Sidebar() {
             <span className={cn("hidden font-bold text-xl text-primary", collapsed && "block")}>PC</span>
           </div>
           <Button variant="ghost" size="icon" onClick={toggleSidebar} className="hidden md:flex">
-            <ChevronLeft className={cn("h-5 w-5 transition-transform", collapsed && "rotate-180")} />
+            <ChevronRight className={cn("h-5 w-5 transition-transform", collapsed && "rotate-180")} />
           </Button>
         </div>
 
@@ -121,6 +123,7 @@ export default function Sidebar() {
 
         {/* Botón de cerrar sesión */}
         <div className="mt-auto border-t py-4 px-2">
+          <ThemeToggle />
           <Link
             href="/"
             className={cn(

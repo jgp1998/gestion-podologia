@@ -5,21 +5,26 @@ import { CalendarIcon, ClipboardList, MessageSquare, Users, TrendingUp, Clock, A
 import Link from "next/link"
 import NewAppointmentModal from "@/components/new-appointment-modal"
 import NewPatientModal from "@/components/new-patient-modal"
-import LinkVolver from "@/components/link-url"
+
 
 export default function DashboardPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <main className="flex-1">
-        <div className="container py-8">
+
+      <main className="flex-1">      
+        <div className="container py-8">   
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>
               <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+
               <p className="text-muted-foreground">Bienvenido de nuevo, Dr. Juan Pérez</p>
             </div>
+
             <div className="flex gap-2">
+          
               <NewAppointmentModal />
               <NewPatientModal />
+
             </div>
           </div>
 
