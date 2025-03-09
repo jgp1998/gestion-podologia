@@ -79,7 +79,7 @@ export default function SettingsPage() {
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="email">Email</Label>
-                          <Input id="email" type="email" defaultValue="juan.perez@Gestión Podologia.com" />
+                          <Input id="email" type="email" defaultValue="juan.perez@gestionpodologia.com" />
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="phone">Teléfono</Label>

@@ -8,44 +8,11 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import AppointmentList from "@/components/appointment-list"
 import NewAppointmentModal from "@/components/new-appointment-modal"
-import LinkVolver from "@/components/link-url"
+
 
 export default function AppointmentsPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-10 border-b bg-background">
-        <div className="container flex h-16 items-center justify-between py-4">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-xl text-primary">Gestión Podologia</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors">
-              Dashboard
-            </a>
-            <a href="/dashboard/appointments" className="text-primary font-medium">
-              Citas
-            </a>
-            <a href="/dashboard/patients" className="text-muted-foreground hover:text-primary transition-colors">
-              Pacientes
-            </a>
-            <a href="/dashboard/messages" className="text-muted-foreground hover:text-primary transition-colors">
-              Mensajes
-            </a>
-            <a href="/dashboard/billing" className="text-muted-foreground hover:text-primary transition-colors">
-              Facturación
-            </a>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button variant="outline" size="sm">
-              <span className="sr-only">Perfil</span>
-              <span>Dr. Juan Pérez</span>
-            </Button>
-
-            <LinkVolver />
-          </div>
-
-        </div>
-      </header>
       <main className="flex-1">
         <div className="container py-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">

@@ -8,36 +8,6 @@ import MessageTemplates from "@/components/message-templates"
 export default function MessagesPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-10 border-b bg-background">
-        <div className="container flex h-16 items-center justify-between py-4">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-xl text-primary">Gestión Podología</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors">
-              Dashboard
-            </a>
-            <a href="/dashboard/appointments" className="text-muted-foreground hover:text-primary transition-colors">
-              Citas
-            </a>
-            <a href="/dashboard/patients" className="text-muted-foreground hover:text-primary transition-colors">
-              Pacientes
-            </a>
-            <a href="/dashboard/messages" className="text-primary font-medium">
-              Mensajes
-            </a>
-            <a href="/dashboard/billing" className="text-muted-foreground hover:text-primary transition-colors">
-              Facturación
-            </a>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button variant="outline" size="sm">
-              <span className="sr-only">Perfil</span>
-              <span>Dr. Juan Pérez</span>
-            </Button>
-          </div>
-        </div>
-      </header>
       <main className="flex-1">
         <div className="container py-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
