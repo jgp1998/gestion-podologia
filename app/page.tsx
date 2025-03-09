@@ -5,7 +5,7 @@ import FeatureCard from "@/components/feature-card"
 import PricingCard from "@/components/pricing-card"
 import TestimonialCard from "@/components/testimonial-card"
 import ThemeToggle from "@/components/theme-toggle"
-import Image from "next/image"
+// import Image from "next/image"
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -60,8 +60,8 @@ export default function Home() {
           </div>
         </div>
         <div className="flex-1">
-        <Image 
-            src="/podologia.jpg"
+        <img 
+            src="/podologia.png"
             alt="Gestión Podología Dashboard"
             className="rounded-lg shadow-xl w-full"
             width={200} // Reemplaza con el tamaño deseado
