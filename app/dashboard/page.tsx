@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CalendarIcon, ClipboardList, MessageSquare, Users, TrendingUp, Clock } from "lucide-react"
+import { CalendarIcon, ClipboardList, MessageSquare, Users, TrendingUp, Clock, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import NewAppointmentModal from "@/components/new-appointment-modal"
+import NewPatientModal from "@/components/new-patient-modal"
+import LinkVolver from "@/components/link-url"
 
 export default function DashboardPage() {
   return (
@@ -34,6 +37,7 @@ export default function DashboardPage() {
               <span className="sr-only">Perfil</span>
               <span>Dr. Juan Pérez</span>
             </Button>
+            <LinkVolver />
           </div>
         </div>
       </header>
@@ -45,14 +49,8 @@ export default function DashboardPage() {
               <p className="text-muted-foreground">Bienvenido de nuevo, Dr. Juan Pérez</p>
             </div>
             <div className="flex gap-2">
-              <Button>
-                <CalendarIcon className="mr-2 h-4 w-4" />
-                Nueva cita
-              </Button>
-              <Button variant="outline">
-                <Users className="mr-2 h-4 w-4" />
-                Nuevo paciente
-              </Button>
+              <NewAppointmentModal />
+              <NewPatientModal />
             </div>
           </div>
 
@@ -190,7 +188,39 @@ export default function DashboardPage() {
                     <CardDescription>Visualiza y gestiona todas tus citas programadas</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p>Contenido del panel de citas...</p>
+                    <div className="flex justify-end mb-4">
+                      <NewAppointmentModal />
+                    </div>
+                    <div className="space-y-4">
+                      {[1, 2, 3].map((_, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center justify-between border-b pb-4 last:border-0 last:pb-0"
+                        >
+                          <div className="flex items-center gap-4">
+                            <div className="rounded-full bg-primary/10 p-2">
+                              <Clock className="h-4 w-4 text-primary" />
+                            </div>
+                            <div>
+                              <p className="font-medium">Paciente {i + 1}</p>
+                              <p className="text-sm text-muted-foreground">Tipo de tratamiento</p>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <p className="font-medium">Hora</p>
+                            <p className="text-sm text-muted-foreground">Duración</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-4">
+                      <Button variant="outline" asChild className="w-full">
+                        <Link href="/dashboard/appointments">
+                          Ver todas las citas
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -201,7 +231,38 @@ export default function DashboardPage() {
                     <CardDescription>Administra los historiales médicos y datos de tus pacientes</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p>Contenido del panel de pacientes...</p>
+                    <div className="flex justify-end mb-4">
+                      <NewPatientModal />
+                    </div>
+                    <div className="space-y-4">
+                      {[1, 2, 3].map((_, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center justify-between border-b pb-4 last:border-0 last:pb-0"
+                        >
+                          <div className="flex items-center gap-4">
+                            <div className="rounded-full bg-primary/10 p-2">
+                              <Users className="h-4 w-4 text-primary" />
+                            </div>
+                            <div>
+                              <p className="font-medium">Nombre del Paciente</p>
+                              <p className="text-sm text-muted-foreground">Diagnóstico</p>
+                            </div>
+                          </div>
+                          <Button variant="outline" size="sm">
+                            Ver historial
+                          </Button>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-4">
+                      <Button variant="outline" asChild className="w-full">
+                        <Link href="/dashboard/patients">
+                          Ver todos los pacientes
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </TabsContent>

@@ -3,17 +3,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-
+import LinkVolver from "@/components/link-url"
 export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-muted/40 px-4">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
-          <div className="text-right text-sm">
-            <Link href="/" className="text-primary hover:underline">
-              Volver
-            </Link>
-          </div>
+          <LinkVolver />
           <CardTitle className="text-2xl font-bold">Iniciar sesión</CardTitle>
           <CardDescription>Ingresa tus credenciales para acceder a tu cuenta</CardDescription>
         </CardHeader>

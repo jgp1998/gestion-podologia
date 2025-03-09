@@ -6,6 +6,7 @@ import { Search, Filter, CreditCard, Download, Plus } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import InvoiceList from "@/components/invoice-list"
 import PaymentMethodForm from "@/components/payment-method-form"
+import NewInvoiceModal from "@/components/new-invoice-modal"
 
 export default function BillingPage() {
   return (
@@ -13,7 +14,7 @@ export default function BillingPage() {
       <header className="sticky top-0 z-10 border-b bg-background">
         <div className="container flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-xl text-primary">Gestión Podología</span>
+            <span className="font-bold text-xl text-primary">PodoCare</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors">
@@ -48,10 +49,7 @@ export default function BillingPage() {
               <p className="text-muted-foreground">Gestiona facturas, pagos y métodos de pago</p>
             </div>
             <div className="flex gap-2">
-              <Button>
-                <Plus className="mr-2 h-4 w-4" />
-                Nueva factura
-              </Button>
+              <NewInvoiceModal />
             </div>
           </div>
 

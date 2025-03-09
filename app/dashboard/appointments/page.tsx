@@ -3,11 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Calendar } from "@/components/ui/calendar"
 import { Badge } from "@/components/ui/badge"
-import { Clock, Plus, Filter, Search } from "lucide-react"
+import { Clock, Filter, Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import AppointmentList from "@/components/appointment-list"
-import AppointmentForm from "@/components/appointment-form"
+import NewAppointmentModal from "@/components/new-appointment-modal"
+import LinkVolver from "@/components/link-url"
 
 export default function AppointmentsPage() {
   return (
@@ -15,7 +16,7 @@ export default function AppointmentsPage() {
       <header className="sticky top-0 z-10 border-b bg-background">
         <div className="container flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-xl text-primary">Gestión Podología</span>
+            <span className="font-bold text-xl text-primary">Gestión Podologia</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors">
@@ -39,7 +40,10 @@ export default function AppointmentsPage() {
               <span className="sr-only">Perfil</span>
               <span>Dr. Juan Pérez</span>
             </Button>
+
+            <LinkVolver />
           </div>
+
         </div>
       </header>
       <main className="flex-1">
@@ -50,10 +54,7 @@ export default function AppointmentsPage() {
               <p className="text-muted-foreground">Programa, gestiona y realiza seguimiento de tus citas</p>
             </div>
             <div className="flex gap-2">
-              <Button>
-                <Plus className="mr-2 h-4 w-4" />
-                Nueva cita
-              </Button>
+              <NewAppointmentModal />
             </div>
           </div>
 
@@ -235,16 +236,6 @@ export default function AppointmentsPage() {
                       />
                     </TabsContent>
                   </Tabs>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Programar nueva cita</CardTitle>
-                  <CardDescription>Completa el formulario para programar una nueva cita</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <AppointmentForm />
                 </CardContent>
               </Card>
             </div>

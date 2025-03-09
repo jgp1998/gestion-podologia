@@ -34,6 +34,9 @@ export default function Header() {
                     <Link href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors">
                         Testimonios
                     </Link>
+                    <Link href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors">
+                        Demo
+                    </Link>
                 </nav>
 
                 <div className="hidden md:flex items-center gap-2">

@@ -4,17 +4,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-
+import LinkVolver from "@/components/link-url"
 export default function RegisterPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-muted/40 px-4 py-8">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
-        <div className="text-right text-sm">
-            <Link href="/" className="text-primary hover:underline">
-              Volver
-            </Link>
-          </div>
+           <LinkVolver />
           <CardTitle className="text-2xl font-bold">Crear una cuenta</CardTitle>
           <CardDescription>Ingresa tus datos para registrarte en Gestión Podología</CardDescription>
         </CardHeader>

@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Plus, Search, Filter, FileText, Users } from "lucide-react"
+import { Search, Filter, FileText, Users } from "lucide-react"
 import PatientList from "@/components/patient-list"
-import PatientForm from "@/components/patient-form"
+import NewPatientModal from "@/components/new-patient-modal"
 
 export default function PatientsPage() {
   return (
@@ -12,7 +12,7 @@ export default function PatientsPage() {
       <header className="sticky top-0 z-10 border-b bg-background">
         <div className="container flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-xl text-primary">Gestión Podología</span>
+            <span className="font-bold text-xl text-primary">Gestión Podologia</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors">
@@ -47,10 +47,7 @@ export default function PatientsPage() {
               <p className="text-muted-foreground">Gestiona los datos médicos y tratamientos de tus pacientes</p>
             </div>
             <div className="flex gap-2">
-              <Button>
-                <Plus className="mr-2 h-4 w-4" />
-                Nuevo paciente
-              </Button>
+              <NewPatientModal />
             </div>
           </div>
 
@@ -90,18 +87,6 @@ export default function PatientsPage() {
                       <PatientList filter="active" />
                     </TabsContent>
                   </Tabs>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Registrar nuevo paciente</CardTitle>
-                  <CardDescription>
-                    Completa el formulario para añadir un nuevo paciente a tu base de datos
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <PatientForm />
                 </CardContent>
               </Card>
             </div>

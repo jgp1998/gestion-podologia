@@ -19,7 +19,7 @@ export default function HeroSection() {
                         </Link>
                     </Button>
                     <Button size="lg" variant="outline" asChild>
-                        <Link href="#demo">Ver demostración</Link>
+                        <Link href="/dashboard">Ver demostración</Link>
                     </Button>
                 </div>
             </div>
